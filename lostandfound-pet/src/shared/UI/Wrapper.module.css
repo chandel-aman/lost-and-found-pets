@@ -1,0 +1,5 @@
+.wrapper{
+    position: relative;
+    top: 4rem;
+    height: calc(100vh - 66px);
+}

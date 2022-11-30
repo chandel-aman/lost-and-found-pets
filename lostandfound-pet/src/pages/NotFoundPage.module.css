@@ -1,0 +1,14 @@
+.NotFoundPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.NotFoundPage img{
+    margin-top: 4rem;
+}
+
+.NotFoundPage h1{
+    font-size: 3.2rem;
+}

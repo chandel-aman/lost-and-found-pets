@@ -1,0 +1,71 @@
+@import "../colors.css";
+
+.petsPage {
+  top: 4rem;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: calc(100vh - 66px);
+  padding: 10px;
+}
+
+.petsPage IonIcon {
+  display: flex;
+  font-size: 24px;
+}
+
+.petFilter {
+  background-color: var(--secondary-color);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 152px;
+  position: fixed;
+}
+
+.petFilter .petType,
+.petFilter .petBreed,
+.petFilter .petSex {
+  box-shadow: rgba(212, 163, 115, 0.15) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  border-radius: 10px;
+  padding: 6px;
+  background-color: var(--primary-color);
+  width: 142px;
+}
+
+.petFilter input[type="radio"] {
+  accent-color: #d4a373;
+}
+
+.petFilter Button {
+  margin-top: 5px;
+  float: right;
+}
+
+.pet-container {
+  width: 100%;
+  margin-left: 153px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pet-container .pets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.pet-container .pets h2{
+padding: 5px 10px;
+}
+
+/* @media (max-width: 400px) {
+} */

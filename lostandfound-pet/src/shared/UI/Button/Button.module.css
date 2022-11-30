@@ -1,0 +1,26 @@
+@import "../../../colors.css";
+
+.button{
+    padding: 8px;
+    width: 60px;
+    border-radius: 18px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.dark{
+    background-color: var(--assent-color);
+    color: #fefae0;
+}
+.dark:hover{
+    background-color: #e6b17c;
+}
+
+.light{
+    background-color: var(--secondary-color);
+    color: #d4a373;
+}
+.light:hover{
+    background-color: #fffceb;
+}

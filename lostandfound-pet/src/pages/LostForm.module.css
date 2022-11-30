@@ -1,0 +1,102 @@
+@import "../colors.css";
+
+.main {
+  background-image: url("https://cdn.pixabay.com/photo/2015/11/15/22/09/cat-1044914_1280.jpg");
+}
+
+div h2 {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.form .formContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.5rem;
+  /* border: 1px solid var(--assent-color); */
+  border-radius: 12px;
+  padding: 1rem;
+  font-size: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+@media (max-width: 499px) {
+  .form .formContainer {
+    flex-direction: column;
+  }
+}
+
+.form .formContainer .personalInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 0.8rem;
+  background-color: rgba(250, 237, 205, 0.5);
+}
+
+.form .formContainer .personalInfo hr {
+  margin: 0.6rem 0 0.3rem 0;
+}
+.form .formContainer h3 {
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+}
+
+.form .formContainer input {
+  margin-bottom: 13px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 2px 5px;
+  background-color: var(--secondary-color);
+}
+
+.form .formContainer input::placeholder{
+    font-size: 12px;
+}
+.form .formContainer .error {
+  color: red;
+}
+
+.form .formContainer .petDetails {
+  border-radius: 10px;
+  padding: 0.8rem;
+  background-color: rgba(250, 237, 205, 0.5);
+  height: max-content;
+}
+
+.form .formContainer .petDetails select {
+  margin-bottom: 8px;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.form Button {
+  margin-top: 10px;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  margin-bottom: 1.8rem;
+}
+
+.petImage, .reward{
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.address{
+  height: 4rem;
+}

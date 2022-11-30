@@ -1,0 +1,16 @@
+@import "../../colors.css";
+
+.lfSection{
+    position: relative;
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+    background-color: var(--lnf-color, inherit);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lfSection div{
+    /* width: 100%; */
+    margin: auto;
+}

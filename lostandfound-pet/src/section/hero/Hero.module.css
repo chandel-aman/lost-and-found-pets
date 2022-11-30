@@ -1,0 +1,208 @@
+@import "../../colors.css";
+
+.container {
+  background-color: var(--primary-color);
+  height: calc(100vh - 4rem);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  top: 4rem;
+  position: relative;
+}
+
+.container .textContainer {
+  width: 35%;
+  margin-right: 4rem;
+}
+
+.container .textContainer h1 {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 3.5rem;
+}
+
+.container .textContainer p {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.container .textContainer .button {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.container .imgContainer {
+  width: 35%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.pawprint {
+  position: relative;
+  transform-origin: 50% 50%;
+  font-size: 100px;
+  width: 1em;
+  height: 5em;
+  color: var(--assent-color);
+}
+
+@media (min-width: 500px) and (max-width: 580px){
+  .pawprint{
+    font-size: 70px !important;
+  }
+}
+
+@media(max-width: 499px){
+  .imgContainer{
+    display: none;
+  }
+  .container{
+    justify-content: center;
+  }
+  .container .textContainer{
+    margin: 0 auto;
+  }
+}
+
+.pawprint .paw {
+  width: 1.5em;
+  height: 1.5em;
+  animation: 2050ms pawAnimation ease-in-out infinite;
+  opacity: 0;
+}
+.pawprint .paw svg,
+.pawprint .paw i {
+  width: 100%;
+  height: 100%;
+}
+.pawprint .paw:nth-child(odd) {
+  transform: rotate(0deg);
+}
+.pawprint .paw:nth-child(even) {
+  transform: rotate(0deg) scaleX(-1) translate(15%, -50%);
+}
+.pawprint .paw:nth-child(1) {
+  animation-delay: 2.25s;
+  transform: rotate(0deg) translate3d(-4%, -48%, 0);
+}
+.pawprint .paw:nth-child(1) {
+  animation-delay: 2.25s;
+  transform: rotate(-8deg) translate3d(30%, -50%, 0);
+}
+.pawprint .paw:nth-child(2) {
+  animation-delay: 2s;
+  transform: rotate(0deg) scaleX(-1) translate3d(10%, -100%, 0);
+}
+.pawprint .paw:nth-child(2) {
+  animation-delay: 2s;
+  transform: rotate(-8deg) scaleX(-1) translate3d(-30%, -120%, 0);
+}
+.pawprint .paw:nth-child(3) {
+  animation-delay: 1.75s;
+  transform: rotate(0deg) translate3d(-12%, -144%, 0);
+}
+.pawprint .paw:nth-child(3) {
+  animation-delay: 1.75s;
+  transform: rotate(0deg) translate3d(45%, -144%, 0);
+}
+.pawprint .paw:nth-child(4) {
+  animation-delay: 1.5s;
+  transform: rotate(0deg) scaleX(-1) translate3d(20%, -200%, 0);
+}
+.pawprint .paw:nth-child(4) {
+  animation-delay: 1.5s;
+  transform: rotate(0deg) scaleX(-1) translate3d(-32%, -200%, 0);
+}
+.pawprint .paw:nth-child(5) {
+  animation-delay: 1.25s;
+  transform: rotate(0deg) translate3d(-20%, -240%, 0);
+}
+.pawprint .paw:nth-child(5) {
+  animation-delay: 1.25s;
+  transform: rotate(0deg) translate3d(40%, -240%, 0);
+}
+.pawprint .paw:nth-child(6) {
+  animation-delay: 1s;
+  transform: rotate(0deg) scaleX(-1) translate3d(30%, -300%, 0);
+}
+.pawprint .paw:nth-child(6) {
+  animation-delay: 1s;
+  transform: rotate(0deg) scaleX(-1) translate3d(-30%, -300%, 0);
+}
+.pawprint .paw:nth-child(7) {
+  animation-delay: 0.75s;
+  transform: rotate(0deg) translate3d(-28%, -336%, 0);
+}
+.pawprint .paw:nth-child(7) {
+  animation-delay: 0.75s;
+  transform: rotate(1deg) translate3d(7%, -336%, 0);
+}
+.pawprint .paw:nth-child(8) {
+  animation-delay: 0.5s;
+  transform: rotate(0deg) scaleX(-1) translate3d(40%, -400%, 0);
+}
+.pawprint .paw:nth-child(8) {
+  animation-delay: 0.5s;
+  transform: rotate(1deg) scaleX(-1) translate3d(8%, -400%, 0);
+}
+.pawprint .paw:nth-child(9) {
+  animation-delay: 0.25s;
+  transform: rotate(0deg) translate3d(-36%, -432%, 0);
+}
+.pawprint .paw:nth-child(10) {
+  animation-delay: 0s;
+  transform: rotate(0deg) scaleX(-1) translate3d(50%, -500%, 0);
+}
+.no-cssanimations .pawprint .paw {
+  opacity: 1;
+}
+
+.pawprint {
+  top: 15%;
+  left: 10%;
+  transform: rotate(10deg) translate(-50%, 0%);
+}
+
+.pawprint2 {
+  top: 15%;
+  right: 20%;
+  transform: rotate(-10deg) translate(-50%, 0%);
+}
+
+.pawprint3 {
+  top: 45%;
+  left: 30%;
+  transform: rotate(150deg) translate(-50%, 0%);
+}
+
+.pawprint4 {
+  top: 45%;
+  right: 35%;
+  transform: rotate(200deg) translate(-50%, 0%);
+}
+
+@keyframes pawAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes path1 {
+  0% {
+    transform: rotate(0deg) scaleX(-1) translate3d(0%, -50%, 0);
+  }
+  30% {
+    transform: rotate(20deg) scaleX(-1) translate3d(-35%, -60%, 0);
+  }
+  100% {
+    transform: rotate(20deg) scaleX(-1) translate3d(0%, -80%, 0);
+  }
+}

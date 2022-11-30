@@ -1,0 +1,16 @@
+.petContainer {
+  background-color: var(--secondary-color);
+  padding: 12px 0;
+  width: 13rem;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.petContainer .petImg img {
+  width: 90%;
+  border-radius: 20px;
+}
+
+.petContainer p {
+  margin-bottom: 5px;
+}

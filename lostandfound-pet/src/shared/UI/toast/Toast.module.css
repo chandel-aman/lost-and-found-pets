@@ -1,0 +1,77 @@
+@import "../../../colors.css";
+
+.toastContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.toast {
+  visibility: hidden;
+  padding: 5px 8px;
+  position: fixed;
+  top: 21.5%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 0.6rem;
+  background-color: var(--assent-color);
+  color: var(--secondary-color);
+  z-index: 99;
+}
+
+.toast span {
+  font-size: 21px;
+}
+
+.toast.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 21.5%;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 21.5%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    top: 21.5%;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    top: 21.5%;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,15 @@
+@import "../../colors.css";
+
+.footer{
+    text-align: center;
+    margin: 1.5rem 0;
+    bottom: 0;
+}
+
+.footer p{
+    margin: 0.7rem 0;
+}
+
+.footer hr{
+    background-color: var(--primary-color);
+}

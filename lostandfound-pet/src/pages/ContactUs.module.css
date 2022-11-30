@@ -1,0 +1,136 @@
+@import "../colors.css";
+
+.contactUs {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contactUs h2 {
+  margin-bottom: 0.7rem;
+}
+
+.contactUs p {
+  margin-bottom: 2rem;
+  font-size: 14px;
+  color: rgb(148, 148, 148);
+}
+
+.contact {
+  display: flex;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.contact .form {
+  padding: 1rem;
+  border-radius: 0px 15px 15px 0px;
+}
+
+.contact .form .submitBtn {
+  background: none;
+  border: none;
+  outline: none;
+  width: fit-content;
+  font-size: 20px;
+  color: var(--assent-color);
+}
+.contact .form .submitBtn:hover {
+  color: rgb(181, 124, 67);
+}
+
+.contact .form label {
+  font-size: 12px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact .form input {
+  width: 12rem;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #000;
+  background-color: transparent;
+  margin-bottom: 0.3rem;
+}
+.contact .form input:focus {
+  border-color: var(--assent-color);
+  color: var(--assent-color);
+}
+
+.contact .form input[name="message"] {
+  width: 20rem;
+}
+
+.contact .form input::placeholder {
+  font-size: 14px;
+  color: rgb(158, 158, 158);
+}
+
+.contactInfo {
+  padding: 0.7rem 0 1rem 1.5rem;
+  border-radius: 15px 0 0 15px;
+  background-color: var(--primary-color);
+}
+
+.contactInfo .info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  width: fit-content;
+}
+
+.contactInfo .info.msg {
+  width: 70%;
+}
+
+.contactInfo .info a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.contactInfo svg {
+  color: var(--assent-color);
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+.contactInfo .info:hover svg {
+  color: rgb(181, 124, 67);
+}
+
+@media (max-width: 750px) {
+  .contact {
+    flex-direction: column;
+  }
+  .contact .form {
+    border-radius: 0px 0px 15px 15px;
+  }
+  .contactInfo {
+    border-radius: 15px 15px 0 0;
+  }
+  .contactUs {
+    margin-bottom: 100px;
+  }
+  .contact .form input[name="message"] {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .contact {
+    width: 300px;
+  }
+  .contactInfo {
+    padding-right: 1rem;
+  }
+  .contact .form input[name="message"] {
+    width: 100%;
+  }
+}

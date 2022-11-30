@@ -1,0 +1,54 @@
+@import "../../colors.css";
+
+.searchContainer {
+  width: 100%;
+  height: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  color: #000;
+}
+
+.searchContainer h1 {
+  margin-bottom: 3rem;
+}
+
+.searchBar {
+  width: 60%;
+  height: 3rem;
+  border: 1px solid var(--assent-color);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.searchBar input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-radius: 25px 0px 0px 25px;
+  height: 100%;
+  width: 95%;
+  font-size: 20px;
+  text-align: center;
+  color: var(--assent-color);
+}
+.searchBar input::placeholder {
+  font-size: small;
+}
+
+.searchBar input:focus {
+  background-color: fefae0;
+}
+
+.searchBar .search {
+  font-size: 2rem;
+  margin: 10px 15px 10px 0;
+  color: var(--assent-color);
+  cursor: pointer;
+}

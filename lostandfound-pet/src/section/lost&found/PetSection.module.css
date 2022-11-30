@@ -1,0 +1,23 @@
+@import "../../colors.css";
+
+.foundContainer {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  gap: 1.2rem;
+  padding: 20px;
+  overflow-y: scroll;
+}
+
+.foundContainer::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.foundContainer {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
