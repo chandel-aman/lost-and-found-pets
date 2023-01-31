@@ -8,8 +8,8 @@ The main objective of this project is to create a user-friendly website that all
 
 
 ## DIVERSION 2k23
-![logo](https://github.com/arpitghura/typing-test/raw/main/assets/images/Diversion-logo.png)
-[Click to Know More about Contributing through Diversion 2k23](diversion2k23.md)
+<a href="https://diversion.tech" alt="diversion2k23">![Diversion-logo](https://user-images.githubusercontent.com/97614113/215878759-401341b3-0f3e-4db3-b816-0c5e06af0fe2.png)</a>
+[**Click to Know More about Contributing through Diversion 2k23**](diversion2k23.md)
 ## Tech Stack
 
 **Frontend:** React, Redux, CSS, CSS Modules
@@ -22,7 +22,7 @@ The main objective of this project is to create a user-friendly website that all
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/chandel-aman/lost-and-found-pets.git
 ```
 
 Go to the project directory
