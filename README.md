@@ -4,7 +4,7 @@
 The main objective of this project is to create a user-friendly website that allows people to report lost or found pets in their area, and to search for matching reports in an effort to reunite pets with their owners.
 
 
-![Logo](https://user-images.githubusercontent.com/97614113/215856608-7277ddbd-6732-464b-9614-0b18b06b6021.png)
+![Logo](https://user-images.githubusercontent.com/97614113/215878302-c47ee2ba-1b44-4fe9-8b98-20becadb6fa1.png)
 
 
 ## DIVERSION 2k23
