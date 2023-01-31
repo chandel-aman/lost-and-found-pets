@@ -70,7 +70,7 @@
 .pawprint .paw {
   width: 1.5em;
   height: 1.5em;
-  animation: 2050ms pawAnimation ease-in-out infinite;
+  animation: 4050ms pawAnimation ease-in-out infinite;
   opacity: 0;
 }
 .pawprint .paw svg,

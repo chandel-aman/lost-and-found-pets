@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useHttpClient } from "../shared/hooks/http-hook";
+
 import Button from "../shared/UI/Button/Button";
 import Wrapper from "../shared/UI/Wrapper";
+import LoadingSpinner from "../shared/UI/Loading/LoadingSpinner";
 
 import classes from "./LostForm.module.css";
-import { useNavigate } from "react-router-dom";
 
 const initialValues = {
   firstName: "",
@@ -82,9 +84,26 @@ const LostForm = () => {
   const navigate = useNavigate();
   const [imageUrl, setImageUrl] = useState("");
   const [file, setFile] = useState("");
+  const [breeds, setBreeds] = useState();
+  const [toggle, setToggle] = useState(false);
+  const [type, setType] = useState("");
 
   const { sendRequest, isLoading, error, clearError } = useHttpClient();
 
+  //fetching the breeds of different pets
+  useEffect(() => {
+    const fetchUsers = async () => {
+      let responseData;
+      try {
+        responseData = await sendRequest("http://localhost:5000/api/breeds");
+        const data = await responseData.breeds[0].breeds;
+        setBreeds(data);
+      } catch (error) {}
+    };
+    fetchUsers();
+  }, [sendRequest]);
+
+  //setting the image url
   useEffect(() => {
     if (!file) {
       return;
@@ -96,8 +115,31 @@ const LostForm = () => {
     fileReader.readAsDataURL(file);
   }, [file]);
 
-  //   const inputFileHandler = ;
+  let breed;
+  if (breeds) {
+    if (type === "dog" && !toggle) {
+      breed = breeds.dogBreeds.slice(0, 4);
+    } else if (type === "dog" && toggle) {
+      breed = breeds.dogBreeds;
+    } else if (type === "cat" && !toggle) {
+      breed = breeds.catBreeds.slice(0, 4);
+    } else if (type === "cat" && toggle) {
+      breed = breeds.catBreeds;
+    } else if (type === "ham") {
+      breed = breeds.hamBreeds;
+    } else {
+      breed = breeds.dogBreeds
+        .slice(0, 3)
+        .concat(breeds.catBreeds.slice(0, 3), breeds.hamBreeds.slice(0, 3));
+    }
+  }
 
+
+  const typeChangeHandler = (e) => {
+    setType(e.target.value);
+  };
+
+  //default style for error messages
   const styles = {
     color: "red",
     fontSize: "12px",
@@ -106,6 +148,7 @@ const LostForm = () => {
 
   return (
     <Wrapper>
+      {isLoading && <LoadingSpinner />}
       <div className={classes.main}>
         <h2>Report Your Lost Pet</h2>
         <Formik
@@ -145,7 +188,7 @@ const LostForm = () => {
             resetForm();
             setImageUrl("");
             setSubmitting(false);
-            navigate('/');
+            navigate("/");
           }}
         >
           {({ isSubmitting, setFieldValue }) => (
@@ -165,11 +208,7 @@ const LostForm = () => {
                     <br />
                     <label htmlFor="lastName">Last Name</label>
                     <br />
-                    <Field
-                      type="text"
-                      name="lastName"
-                      placeholder="Loup"
-                    />
+                    <Field type="text" name="lastName" placeholder="Loup" />
                     <ErrorMessage
                       name="lastName"
                       component="div"
@@ -222,7 +261,7 @@ const LostForm = () => {
                   <br />
                   <label htmlFor="petType">Pet Type</label>
                   <br />
-                  <Field as="select" name="petType">
+                  <Field as="select" name="petType" onChange={typeChangeHandler}>
                     <option value="">--</option>
                     <option value="dog">Dog</option>
                     <option value="cat">Cat</option>
@@ -233,11 +272,25 @@ const LostForm = () => {
                   <br />
                   <label htmlFor="breed">Breed</label>
                   <br />
-                  <Field
-                    type="text"
-                    name="breed"
-                    placeholder="German Shepherd"
-                  />
+                  <Field as="select" name="breed">
+                    <option value="">--</option>
+                    {breed &&
+                      breed.map((p) => (
+                        // <div key={`${type}_${p}`}>
+                        //   <input
+                        //     type="radio"
+                        //     id={p}
+                        //     value={p}
+                        //     name="pet-breed"
+                        //   />
+                        //   <label htmlFor={p}>{p}</label>
+                        //   <br />
+                        // </div>
+                        <option key={`${type}_${p}`} value={p}>
+                          {p}
+                        </option>
+                      ))}
+                  </Field>
                   <ErrorMessage name="breed" component="div" style={styles} />
                   <br />
                   <label htmlFor="sex">Sex</label>

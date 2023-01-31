@@ -20,7 +20,7 @@ function App() {
         <Route path="/contactUs" element={<ContactUs />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </>   
   );
 }

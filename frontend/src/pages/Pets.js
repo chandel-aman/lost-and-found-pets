@@ -6,7 +6,6 @@ import { usePetData } from "../shared/hooks/pet-hook";
 import Button from "../shared/UI/Button/Button";
 import PetContainer from "../shared/UI/PetContainer/PetContainer";
 import Card from "../shared/UI/Card/Card";
-import IonIcon from "@reacticons/ionicons";
 
 import classes from "./Pets.module.css";
 
