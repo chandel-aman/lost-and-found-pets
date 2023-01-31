@@ -51,3 +51,13 @@ See [`contributing.md`](https://github.com/chandel-aman/lost-and-found-pets/blob
 
 Please adhere to this project's `code of conduct`.
 
+## UI
+
+Signup Page
+
+![signup](https://user-images.githubusercontent.com/97614113/215884631-bda45061-e841-4ea0-9dee-fde6022a1bc3.png)
+
+Signin Page
+
+![signin](https://user-images.githubusercontent.com/97614113/215885176-2c112f94-07fe-4ed7-b259-6ebbe7e9869a.png)
+
