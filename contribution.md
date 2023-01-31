@@ -1,4 +1,4 @@
-# React app setup guidelines 🚀
+# React app contribution guidelines 🚀
 
 <br/>
 
