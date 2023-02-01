@@ -11,7 +11,7 @@ export const usePetData = (props) => {
     const fetchUsers = async () => {
       try {
         const responseData = await sendRequest(
-          "http://localhost:5000/api/pet/allPets"
+          process.env.REACT_APP_BACKEND_URL+"/api/pet/allPets"
         );
         setPets(responseData.pets);
       } catch (error) {}

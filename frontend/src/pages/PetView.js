@@ -21,7 +21,7 @@ const PetView = () => {
     const fetchPetDetails = async () => {
       try {
         const responseData = await sendRequest(
-          "http://localhost:5000/api/pet/" + `${petId}`
+          process.env.REACT_APP_BACKEND_URL+"/api/pet/" + `${petId}`
         );
         const pet = await responseData.pet;
         setloadedPet(pet);
@@ -32,16 +32,16 @@ const PetView = () => {
 
   let imageURL, bgURL;
   if (!isLoading && loadedPet) {
-    imageURL = "http://localhost:5000/" + `${loadedPet.file}`;
+    imageURL = process.env.REACT_APP_BACKEND_URL+"/" + `${loadedPet.file}`;
     bgURL =
-      "http://localhost:5000/uploads/images/" + loadedPet.file.substring(15);
+      process.env.REACT_APP_BACKEND_URL+"/uploads/images/" + loadedPet.file.substring(15);
   }
 
   const deletePetHandler = async () => {
     //deleting the pet form the database
     try {
       await sendRequest(
-        "http://localhost:5000/api/pet/" + `${petId}`,
+        process.env.REACT_APP_BACKEND_URL+"/api/pet/" + `${petId}`,
         "DELETE"
       );
     } catch (error) {

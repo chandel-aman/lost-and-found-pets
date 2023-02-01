@@ -95,7 +95,7 @@ const LostForm = () => {
     const fetchUsers = async () => {
       let responseData;
       try {
-        responseData = await sendRequest("http://localhost:5000/api/breeds");
+        responseData = await sendRequest(process.env.REACT_APP_BACKEND_URL+"/api/breeds");
         const data = await responseData.breeds[0].breeds;
         setBreeds(data);
       } catch (error) {}
@@ -177,7 +177,7 @@ const LostForm = () => {
               formData.append("sex", values.sex);
               formData.append("lost", true);
               await sendRequest(
-                "http://localhost:5000/api/pet/lostPet",
+                process.env.REACT_APP_BACKEND_URL+"/api/pet/lostPet",
                 "POST",
                 formData
               );

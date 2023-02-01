@@ -13,7 +13,7 @@ const PetContainer = (props) => {
   return (
     <div className={classes.petContainer}>
       <div className={classes.petImg}>
-        <img src={"http://localhost:5000/" + `${pet.file}`} alt="pet" />
+        <img src={process.env.REACT_APP_BACKEND_URL+"/" + `${pet.file}`} alt="pet" />
       </div>
 
       <h2>{pet.petName}</h2><span>({pet.petType})</span>
