@@ -43,7 +43,6 @@ const ContactForm = (props) => {
         }}
         validationSchema={validationSchema}
         onSubmit={(values, { setSubmitting, resetForm }) => {
-          console.log(values);
           try {
             emailjs
               .send(
