@@ -19,6 +19,10 @@ The main objective of this project is to create a user-friendly website that all
 
 ## Setup
 
+Fork the poject
+
+Create a new branch  
+
 Clone the project
 
 ```bash
