@@ -57,6 +57,8 @@ Please adhere to this project's `code of conduct`.
 
 ## UI
 
+[Figma](https://www.figma.com/file/SnJ2Rzpy1KtgZfqePy3aka/lnfp?node-id=0%3A1&t=wI1uSeu3Z4SCGCJA-1)
+
 Signup Page
 
 ![signup](https://user-images.githubusercontent.com/97614113/215884631-bda45061-e841-4ea0-9dee-fde6022a1bc3.png)
