@@ -8,7 +8,11 @@ const NavLinks = (props) => {
     props.menuToggleHandler();
   };
   return (
-    <ul className={`${classes.navlinks} ${props.toggle ? classes.fadeInRight : ""}`}>
+    <ul
+      className={`${classes.navlinks} ${
+        props.toggle ? classes.fadeInRight : ""
+      }`}
+    >
       <li>
         <NavLink
           to="/"

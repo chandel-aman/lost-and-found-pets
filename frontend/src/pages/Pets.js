@@ -31,7 +31,9 @@ const Pets = () => {
     const fetchUsers = async () => {
       let responseData;
       try {
-        responseData = await sendRequest("https://amused-cyan-shrimp.cyclic.app/api/breeds");
+        responseData = await sendRequest(
+          `${process.env.REACT_APP_BACKEND_URL}/api/breeds`
+        );
         const data = await responseData.breeds[0].breeds;
         setBreeds(data);
       } catch (error) {}
@@ -212,7 +214,7 @@ const Pets = () => {
                   <Card
                     key={`${Math.random() * 100}${pet.petType}_${pet.breed}`}
                   >
-                    <PetContainer pet={pet} btnTxt={pet.lost?"View":""} />
+                    <PetContainer pet={pet} btnTxt={pet.lost ? "View" : ""} />
                   </Card>
                 );
               })}

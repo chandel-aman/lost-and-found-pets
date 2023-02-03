@@ -28,6 +28,6 @@ router.post(
   petController.createPet
 );
 
-router.delete('/:petId', petController.deletePet);
+router.delete("/:petId", petController.deletePet);
 
 module.exports = router;

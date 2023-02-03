@@ -95,7 +95,10 @@ const LostForm = () => {
     const fetchUsers = async () => {
       let responseData;
       try {
-        responseData = await sendRequest("https://amused-cyan-shrimp.cyclic.app/api/breeds");
+        // "https://amused-cyan-shrimp.cyclic.app/api/breeds"
+        responseData = await sendRequest(
+          `${process.env.REACT_APP_BACKEND_URL}/api/breeds`
+        );
         const data = await responseData.breeds[0].breeds;
         setBreeds(data);
       } catch (error) {}
@@ -133,7 +136,6 @@ const LostForm = () => {
         .concat(breeds.catBreeds.slice(0, 3), breeds.hamBreeds.slice(0, 3));
     }
   }
-
 
   const typeChangeHandler = (e) => {
     setType(e.target.value);
@@ -177,7 +179,7 @@ const LostForm = () => {
               formData.append("sex", values.sex);
               formData.append("lost", true);
               await sendRequest(
-                "https://amused-cyan-shrimp.cyclic.app/api/pet/lostPet",
+                `${process.env.REACT_APP_BACKEND_URL}/api/pet/lostPet"`,
                 "POST",
                 formData
               );
@@ -261,7 +263,11 @@ const LostForm = () => {
                   <br />
                   <label htmlFor="petType">Pet Type</label>
                   <br />
-                  <Field as="select" name="petType" onChange={typeChangeHandler}>
+                  <Field
+                    as="select"
+                    name="petType"
+                    onChange={typeChangeHandler}
+                  >
                     <option value="">--</option>
                     <option value="dog">Dog</option>
                     <option value="cat">Cat</option>
