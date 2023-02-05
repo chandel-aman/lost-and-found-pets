@@ -137,8 +137,12 @@ const LostForm = () => {
     }
   }
 
-  const typeChangeHandler = (e) => {
-    setType(e.target.value);
+  // const typeChangeHandler = (e) => {
+  //   setType(e.target.value);
+  // };
+  const typeChangeHandler = (pt) => {
+    // console.log(pt);
+    setType(pt);
   };
 
   //default style for error messages
@@ -266,9 +270,9 @@ const LostForm = () => {
                   <Field
                     as="select"
                     name="petType"
-                    onChange={typeChangeHandler}
+                    // onChange={typeChangeHandler}
                   >
-                    <option value="">--</option>
+                    <option value="">Select</option>
                     <option value="dog">Dog</option>
                     <option value="cat">Cat</option>
                     <option value="ham">Ham</option>
