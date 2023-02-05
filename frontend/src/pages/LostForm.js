@@ -106,7 +106,10 @@ const LostForm = () => {
     const fetchUsers = async () => {
       let responseData;
       try {
-        responseData = await sendRequest("https://amused-cyan-shrimp.cyclic.app/api/breeds");
+        // "https://amused-cyan-shrimp.cyclic.app/api/breeds"
+        responseData = await sendRequest(
+          `${process.env.REACT_APP_BACKEND_URL}/api/breeds`
+        );
         const data = await responseData.breeds[0].breeds;
         setBreeds(data);
       } catch (error) {}
@@ -188,7 +191,7 @@ const LostForm = () => {
               formData.append("sex", values.sex);
               formData.append("lost", true);
               await sendRequest(
-                "https://amused-cyan-shrimp.cyclic.app/api/pet/lostPet",
+                `${process.env.REACT_APP_BACKEND_URL}/api/pet/lostPet"`,
                 "POST",
                 formData
               );
