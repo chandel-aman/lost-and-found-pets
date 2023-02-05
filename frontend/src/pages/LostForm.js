@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form, Field, ErrorMessage, useFormikContext } from "formik";
 import { useHttpClient } from "../shared/hooks/http-hook";
 
 import Button from "../shared/UI/Button/Button";
@@ -28,6 +28,7 @@ const initialValues = {
 
 const validate = (values) => {
   const errors = {};
+  // console.log(values);
   if (!values.firstName) {
     errors.firstName = "Required";
   } else if (/[0-9]/.test(values.firstName)) {
@@ -65,7 +66,7 @@ const validate = (values) => {
   }
 
   if (!values.sex) {
-    errors.petType = "Required";
+    errors.sex = "Required";
   }
 
   if (!values.color) {
@@ -78,6 +79,16 @@ const validate = (values) => {
   }
 
   return errors;
+};
+
+const FormObserver = (props) => {
+  const { values } = useFormikContext();
+  // console.log(values);
+  useEffect(() => {
+    props.typeChange(values.petType);
+  }, [values.petType]);
+
+  return null;
 };
 
 const LostForm = () => {
@@ -121,11 +132,11 @@ const LostForm = () => {
   let breed;
   if (breeds) {
     if (type === "dog" && !toggle) {
-      breed = breeds.dogBreeds.slice(0, 4);
+      breed = breeds.dogBreeds;
     } else if (type === "dog" && toggle) {
       breed = breeds.dogBreeds;
     } else if (type === "cat" && !toggle) {
-      breed = breeds.catBreeds.slice(0, 4);
+      breed = breeds.catBreeds;
     } else if (type === "cat" && toggle) {
       breed = breeds.catBreeds;
     } else if (type === "ham") {
@@ -137,9 +148,6 @@ const LostForm = () => {
     }
   }
 
-  // const typeChangeHandler = (e) => {
-  //   setType(e.target.value);
-  // };
   const typeChangeHandler = (pt) => {
     // console.log(pt);
     setType(pt);
@@ -199,6 +207,7 @@ const LostForm = () => {
         >
           {({ isSubmitting, setFieldValue }) => (
             <Form className={classes.form}>
+              <FormObserver typeChange={typeChangeHandler} />
               <div className={classes.formContainer}>
                 <div className={classes.personalInfo}>
                   <div>
@@ -283,7 +292,7 @@ const LostForm = () => {
                   <label htmlFor="breed">Breed</label>
                   <br />
                   <Field as="select" name="breed">
-                    <option value="">--</option>
+                    <option value="">Select</option>
                     {breed &&
                       breed.map((p) => (
                         // <div key={`${type}_${p}`}>
@@ -306,7 +315,7 @@ const LostForm = () => {
                   <label htmlFor="sex">Sex</label>
                   <br />
                   <Field as="select" name="sex">
-                    <option value="">--</option>
+                    <option value="">Select</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                   </Field>
