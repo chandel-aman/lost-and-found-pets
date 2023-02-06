@@ -12,7 +12,7 @@ export const usePetData = (props) => {
     const fetchUsers = async () => {
       try {
         const responseData = await sendRequest(
-          "https://amused-cyan-shrimp.cyclic.app/api/pet/allPets"
+          "http://localhost:5000/api/pet/allPets"
         );
         setPets(responseData.pets);
       } catch (error) {}

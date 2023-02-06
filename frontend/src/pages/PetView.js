@@ -21,7 +21,7 @@ const PetView = () => {
     const fetchPetDetails = async () => {
       try {
         const responseData = await sendRequest(
-          "https://amused-cyan-shrimp.cyclic.app/api/pet/" + `${petId}`
+          "http://localhost:5000/api/pet/" + `${petId}`
         );
         const pet = await responseData.pet;
         setloadedPet(pet);
@@ -32,16 +32,16 @@ const PetView = () => {
 
   let imageURL, bgURL;
   if (!isLoading && loadedPet) {
-    imageURL = "https://amused-cyan-shrimp.cyclic.app/" + `${loadedPet.file}`;
+    imageURL = "http://localhost:5000/" + `${loadedPet.file}`;
     bgURL =
-      "https://amused-cyan-shrimp.cyclic.app/uploads/images/" + loadedPet.file.substring(15);
+      "http://localhost:5000/uploads/images/" + loadedPet.file.substring(15);
   }
 
   const deletePetHandler = async () => {
     //deleting the pet form the database
     try {
       await sendRequest(
-        "https://amused-cyan-shrimp.cyclic.app/api/pet/" + `${petId}`,
+        "http://localhost:5000/api/pet/" + `${petId}`,
         "DELETE"
       );
     } catch (error) {
