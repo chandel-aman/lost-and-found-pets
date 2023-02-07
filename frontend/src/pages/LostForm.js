@@ -106,7 +106,7 @@ const LostForm = () => {
     const fetchUsers = async () => {
       let responseData;
       try {
-        responseData = await sendRequest("http://localhost:5000/api/breeds");
+        responseData = await sendRequest("https://amused-cyan-shrimp.cyclic.app/api/breeds");
         const data = await responseData.breeds[0].breeds;
         setBreeds(data);
       } catch (error) {}
@@ -188,7 +188,7 @@ const LostForm = () => {
               formData.append("sex", values.sex);
               formData.append("lost", true);
               await sendRequest(
-                "http://localhost:5000/api/pet/lostPet",
+                "https://amused-cyan-shrimp.cyclic.app/api/pet/lostPet",
                 "POST",
                 formData
               );

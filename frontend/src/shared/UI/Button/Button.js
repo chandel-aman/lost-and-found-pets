@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.css';
 import classes from "./Button.module.css";
 
 const Button = (props) => {
