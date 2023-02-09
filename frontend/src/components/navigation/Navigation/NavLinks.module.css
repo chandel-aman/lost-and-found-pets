@@ -1,10 +1,29 @@
 @import "../../../colors.css";
 
+.navbar {
+height: 80px;
+display: flex;
+background-color: transparent;
+justify-content: center;
+align-items: center;
+position: sticky;
+top: 0;
+font-size: 1.3rem;
+border-bottom: 1px solid white; }
+
+.navbar-container {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 80px;
+max-width: 1500px;}
+
 .navlinks {
   display: flex;
   flex-direction: row;
   align-items: center;
-  color: var(--font-color);
+  color: white;
+  /*color: var(--font-color); */
 }
 
 .navlinks li {
@@ -18,16 +37,30 @@
 }
 
 .signup {
-  padding: 8px;
-  border-radius: 18px;
-  background-color: var(--assent-color);
-  color: var(--font-color);
-  cursor: pointer;
+  padding: 5px 16px;
+  border: 2px solid rgba(255,255,255,0.6);;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 15px;
+  line-height: 20px;
+/*  background-color: var(--assent-color);
+    color: var(--font-color); */
 }
-/* .signup:hover{
+
+ /* .signup:hover{
     background-color: var(--font-color);
     color: var(--primary-color);
 } */
+
+.login {
+  padding: 5px 16px;
+  border: 2px solid rgba(255,255,255,0.6);;
+  border-radius: 50px;
+  color: black;
+  font-size: 15px;
+  background-color: #fff;
+  line-height: 20px;
+}
 
 .navlinks li a:hover:not(.signup a),
 .active {

@@ -1,14 +1,15 @@
 @import "../../colors.css";
 
 .container {
-  background-color: var(--primary-color);
+  background-image: url("bg.jpg");
+/*  background-color: var(--primary-color);*/
   height: calc(100vh - 4rem);
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  top: 4rem;
+/*  top: 4rem; */
   position: relative;
 }
 
