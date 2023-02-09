@@ -10,7 +10,7 @@
 - To setup the frontend `npm install`
 - Find all the urls with `https://amused-cyan-shrimp.cyclic.app/` and replace it with `http://localhost:5000/`
 - Once the node modules and other stuffs are installed , `npm start` to start the app in `http://localhost:3000/`
-- You can access the `backend` folder to get the backend and start it with `npm start` in `https://amused-cyan-shrimp.cyclic.app/`
+- You can access the `backend` folder to get the backend and start it with `npm start` in `http://localhost:5000/`
 - Make changes **according** to the Tasks assigned to you
 - Maintain the folder structure
 - Keep big Pages like **Login page, home page** in the `src\pages` folder
