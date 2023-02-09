@@ -234,9 +234,10 @@ const LostForm = () => {
                     <label htmlFor="phone">Phone</label>
                     <br />
                     <Field
-                      type="number"
+                      type="tel"
+                      pattern="[+][0-9]{2} [0-9]{10}" 
                       name="phone"
-                      placeholder="9876543210"
+                      placeholder="+91 9876543210"
                     />
                     <ErrorMessage name="phone" component="div" style={styles} />
                     <br />
