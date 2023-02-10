@@ -43,8 +43,8 @@ const validate = (values) => {
 
   if (!values.phone) {
     errors.phone = "Required";
-  } else if (values.phone.length > 10) {
-    errors.phone = "Too Long!";
+  } else if (values.phone.length !== 14) {
+    errors.phone = "Invalid number";
   }
 
   if (!values.email) {
