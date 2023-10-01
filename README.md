@@ -4,13 +4,11 @@
 
 The main objective of this project is to create a user-friendly website that allows people to report lost or found pets in their area, and to search for matching reports in an effort to reunite pets with their owners.
 
-
-
-
-
 ## DIVERSION 2k23
+
 <a href="https://diversion.tech" alt="diversion2k23">![Diversion-logo](https://user-images.githubusercontent.com/97614113/215878759-401341b3-0f3e-4db3-b816-0c5e06af0fe2.png)</a>
 [**Click to Know More about Contributing through Diversion 2k23**](diversion2k23.md)
+
 ## Tech Stack
 
 ### Frontend:
@@ -28,8 +26,6 @@ The main objective of this project is to create a user-friendly website that all
     <img alt="CSS Modules" src="https://img.shields.io/badge/CSS%20Modules-v5.x-29b6f6.svg?style=flat&logo=css-modules" height=25px>
   </a>
 
-
-
 ### Backend:
 
   <a href="https://nodejs.org/">
@@ -42,34 +38,31 @@ The main objective of this project is to create a user-friendly website that all
     <img alt="MongoDB" src="https://img.shields.io/badge/MongoDB-4.x-47A248.svg?style=flat&logo=mongodb" height=25px>
   </a>
 
-
-
-
 ## Setup
 
-+ Fork the poject
+- Fork the poject
 
-+ Create a new branch  
+- Create a new branch
 
-+ Clone the project
+- Clone the project
 
 ```bash
   git clone https://github.com/chandel-aman/lost-and-found-pets.git
 ```
 
-+ Go to the project directory
+- Go to the project directory
 
 ```bash
   cd frontend
 ```
 
-+ Install dependencies
+- Install dependencies
 
 ```bash
   npm install
 ```
 
-+ Start the server
+- Start the server
 
 ```bash
   npm start
@@ -77,11 +70,11 @@ The main objective of this project is to create a user-friendly website that all
 
 ## Contributing
 
-+ Contributions are always welcome!
+- Contributions are always welcome!
 
-+ See [`contributing.md`](https://github.com/chandel-aman/lost-and-found-pets/blob/master/contribution.md) for ways to get started.
+- See [`contributing.md`](https://github.com/chandel-aman/lost-and-found-pets/blob/master/contribution.md) for ways to get started.
 
-+ Please adhere to this project's `code of conduct`.
+- Please adhere to this project's `code of conduct`.
 
 ## UI
 
@@ -101,7 +94,5 @@ Sign In Page
   <img src="https://contrib.rocks/image?repo=chandel-aman/lost-and-found-pets" />
 </a>
 
-``` Learn Markdown ```
-
-
-
+`Learn Markdown`
+`This document is the README.md`
