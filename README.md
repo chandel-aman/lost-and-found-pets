@@ -95,4 +95,5 @@ Sign In Page
 </a>
 
 `Learn Markdown`
+`Follow the steps mentioned in contribution.md file`
 `This document is the README.md`
